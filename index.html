@@ -1,213 +1,440 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>주식투자 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #FCFBF7;
-      --charcoal-fg: #1E1B18;
-      --gold-accent: #b8976f;
-      --hairline-color: #e5e2db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백링크 자동화 프로그램 | 마포 주식투자 전문가의 PBN 솔루션</title>
+    <meta name="description" content="마포에서 주식투자하는 bro들을 위한 백링크 자동화 프로그램. PBN 사이트로 오가닉 트래픽을 폭발시키고, 당신의 주식 블로그나 사이트를 1면에 올려보세요. 지금 전화 010-6279-0862로 문의하세요.">
+    <meta name="keywords" content="백링크 자동화, PBN, 주식투자 백링크, 마포 백링크, 자동 백링크 프로그램, SEO 자동화, 파워링크">
+    <link rel="canonical" href="https://sf-t3-1779642675702-207.vercel.app/">
+    <meta name="bpaas-design-system" content="midnight-glass">
+    <meta name="bpaas-design-theme" content="kr-midnight-glass">
+
+    <!-- OG 메타 + Twitter Card -->
+    <meta property="og:title" content="백링크 자동화 프로그램 | 마포 주식투자 PBN">
+    <meta property="og:description" content="진짜 주식투자하는 bro들을 위한 백링크 자동화. PBN으로 트래픽 폭발! 지금 전화 주세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-207.vercel.app/">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%230d1117'/%3E%3Ctext x='600' y='315' text-anchor='middle' fill='%23f0f4f8' font-size='48' font-family='Georgia, serif'%3E백링크 자동화%3C/text%3E%3C/svg%3E">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="백링크 자동화 프로그램 | 마포 주식투자 PBN">
+    <meta name="twitter:description" content="주식투자하는 bro, PBN 백링크 자동화로 트래픽 폭발시키자!">
+
+    <!-- JSON-LD 스키마 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "백링크 자동화 프로그램",
+        "description": "마포 주식투자자를 위한 PBN 백링크 자동화 솔루션. SEO 트래픽을 극대화합니다.",
+        "brand": {
+            "@type": "Brand",
+            "name": "PBN Bro"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "문의",
+            "priceCurrency": "KRW",
+            "telephone": "010-6279-0862"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "24"
+        }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* CSS Reset & Base */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 18px; scroll-behavior: smooth; }
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #0d1117;
+            color: #f0f4f8;
+            line-height: 1.8;
+            letter-spacing: 0.03em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 { font-weight: 700; letter-spacing: 0.05em; line-height: 1.2; }
+        h1 { font-size: 3.2rem; margin-bottom: 1rem; }
+        h2 { font-size: 2.2rem; margin-bottom: 1.5rem; border-bottom: 2px solid #635bff; display: inline-block; padding-bottom: 0.3rem; }
+        h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+        p { margin-bottom: 1.2rem; }
+        a { color: #635bff; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+        a:hover { border-bottom-color: #635bff; }
+
+        /* Drop Cap */
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            padding-right: 0.3rem;
+            color: #635bff;
+            font-weight: 700;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* Header & Navigation */
+        header {
+            padding: 48px 0 24px;
+            border-bottom: 1px solid rgba(99, 91, 255, 0.2);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: #f0f4f8;
+            border: none;
+        }
+        .logo:hover { border: none; opacity: 0.8; }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+        }
+        nav ul li a {
+            color: #f0f4f8;
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            border: none;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+        nav ul li a:hover { border-bottom-color: #635bff; }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: #f0f4f8;
+            transition: 0.3s;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.9) 0%, rgba(99, 91, 255, 0.15) 50%, rgba(13, 17, 23, 0.9) 100%);
+            border-bottom: 2px solid rgba(99, 91, 255, 0.3);
+        }
+        .hero h1 {
+            font-size: 3.6rem;
+            background: linear-gradient(135deg, #f0f4f8 0%, #635bff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 1.5rem auto;
+            color: rgba(240, 244, 248, 0.8);
+        }
+        .hero .cta-link {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: #635bff;
+            border: 2px solid #635bff;
+            padding: 12px 32px;
+            letter-spacing: 0.1em;
+            transition: background 0.3s, color 0.3s;
+        }
+        .hero .cta-link:hover {
+            background: #635bff;
+            color: #0d1117;
+            border-color: #635bff;
+        }
+
+        /* Section spacing */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(99, 91, 255, 0.1);
+        }
+        section:last-of-type { border-bottom: none; }
+
+        /* Fine borders */
+        .fine-border {
+            border: 1px solid rgba(99, 91, 255, 0.15);
+            padding: 32px;
+        }
+
+        /* Review Cards */
+        .review-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .review-card {
+            border: 1px solid rgba(99, 91, 255, 0.15);
+            padding: 32px;
+            position: relative;
+        }
+        .review-card .stars {
+            color: #635bff;
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.5rem;
+        }
+        .review-card .meta {
+            font-size: 0.8rem;
+            color: rgba(240, 244, 248, 0.5);
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .review-card blockquote {
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Feature list */
+        .feature-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        .feature-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(99, 91, 255, 0.1);
+        }
+        .feature-list li::before {
+            content: "— ";
+            color: #635bff;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            text-align: center;
+            border-top: 1px solid rgba(99, 91, 255, 0.2);
+            font-size: 0.85rem;
+            color: rgba(240, 244, 248, 0.5);
+        }
+        footer a { color: rgba(240, 244, 248, 0.6); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 24px; }
+            h1 { font-size: 2.4rem; }
+            h2 { font-size: 1.8rem; }
+            .hero h1 { font-size: 2.6rem; }
+            .hero { padding: 48px 0; }
+            section { padding: 48px 0; }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: #0d1117;
+                padding: 24px;
+                border-bottom: 1px solid #635bff;
+                gap: 16px;
+                z-index: 10;
+            }
+            nav ul.open { display: flex; }
+            .hamburger { display: flex; }
+
+            .review-card { padding: 24px; }
+            .fine-border { padding: 24px; }
+        }
+
+        @media (max-width: 480px) {
+            html { font-size: 16px; }
+            .container { padding: 0 16px; }
+            h1 { font-size: 2rem; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">EDITORIAL.T3</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="kicker">BOUTIQUE T3 / ACCENT HAIRLINES</div>
-      <h1>주식투자 리서치 및 기술 인프라 저널</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>주식투자</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>주식투자: 주식투자: 배당주 투자로 은퇴 연금 마련하기</h3>
-          <p>불확실성이 극대화되는 거시경제 파동 속에서 안정적이고 마르지 않는 고정 배당 수익을 가져다주는 우량 배당 귀족주 장기 투자는 직장인들에게 가장 든든한 금융 방패입니다. 배당 복리 ...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>주식투자: 주식투자: 코스트 에버리지 우량주 분할 매수</h3>
-          <p>시장 타이밍을 예측해 최저점에 주식을 매수하려는 헛된 시도보다는, 매월 일정한 시기에 정해진 금액만큼 대형 지수 추종 ETF나 우량 기업의 지분을 꾸준히 사 모으는 분할 매수 적립...</p>
-        </a>
-      
+<header>
+    <div class="container header-inner">
+        <a href="/" class="logo">PBN·BRO</a>
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+            <span></span><span></span><span></span>
+        </button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#intro">소개</a></li>
+                <li><a href="#features">기능</a></li>
+                <li><a href="#reviews">후기</a></li>
+                <li><a href="tel:010-6279-0862">010-6279-0862</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>주식투자: 주식투자: 자산 배분 전략과 위험 분산</h3>
-          <p>완벽한 위험 통제를 달성하는 자산 배분의 핵심은 주식뿐만 아니라 안전한 실물 자산 및 대체 자산에 적정한 밸런스 비중을 유지하는 것입니다. 이는 일시적 하락 파동에서도 내 멘탈과 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>주식투자 전문가들이 엄선한 백링크 자동화 프로그램 상세 비법 가이드</h3>
-          <p>성공적인 주식투자를 위해 우량 기업의 재무제표와 분기 배당 성향을 꼼꼼하게 연구하다 보면, 리스크의 철저한 분산을 보장하는 것은 오직 변동 없는 오프라인 실물 경제의 든든한 고정 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>주식투자 전문가들이 엄선한 백링크 자동화 프로그램 상세 비법 가이드</h3>
-          <p>성공적인 주식투자를 위해 우량 기업의 재무제표와 분기 배당 성향을 꼼꼼하게 연구하다 보면, 리스크의 철저한 분산을 보장하는 것은 오직 변동 없는 오프라인 실물 경제의 든든한 고정 ...</p>
-        </a>
-      
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>백링크 자동화,<br>이제 bro처럼.</h1>
+            <p class="drop-cap">주식투자하는 사람들에게 백링크는 곧 돈이다. PBN 네트워크로 트래픽을 폭발시키는 자동화 프로그램, 지금 시작해.</p>
+            <a href="tel:010-6279-0862" class="cta-link">전화로 문의 → 010-6279-0862</a>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.T3. ALL RIGHTS RESERVED.</div>
+    </section>
+
+    <!-- Intro -->
+    <section id="intro">
+        <div class="container">
+            <h2>왜 PBN인가?</h2>
+            <p class="drop-cap">솔직히 말해서, 요즘 SEO는 그냥 키워드 넣는다고 되는 게 아냐. 네가 주식 사이트를 운영한다면, 경쟁자들은 이미 PBN으로 링크를 쌓고 있어. 우리 프로그램은 마포에서 주식투자하는 bro들을 위해 만들어졌어. 복잡한 설정 없이, 클릭 몇 번으로 백링크를 자동 생성한다. 진짜야.</p>
+            <p>나는 5년째 주식 블로그를 운영하면서 이 프로그램을 직접 사용했어. 결과? 오가닉 트래픽 3배, 그리고 네이버에서 1면에 노출됐지. 너도 할 수 있어.</p>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <div class="container">
+            <h2>이런 기능이 있어</h2>
+            <div class="fine-border">
+                <ul class="feature-list">
+                    <li><strong>자동 PBN 등록</strong> — 50개 이상의 PBN 사이트에 자동으로 백링크 등록</li>
+                    <li><strong>앵커 텍스트 최적화</strong> — 주식 키워드에 맞춰 자동 설정</li>
+                    <li><strong>일일 모니터링</strong> — 링크 생존율과 트래픽 리포트</li>
+                    <li><strong>멀티 도메인 지원</strong> — 한 번에 여러 사이트 관리</li>
+                    <li><strong>24시간 자동화</strong> — 사람 손 안 대고 돌아감</li>
+                </ul>
+                <p style="margin-top:1rem;">이 모든 게 <strong>월 정액</strong> 하나로. 그리고 너가 마포에 살거나 주식투자한다면, 첫 달은 반값이야. bro 특가.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews (UGC) -->
+    <section id="reviews">
+        <div class="container">
+            <h2>진짜 후기</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>“솔직히 반신반의했는데, 일주일 만에 네이버 유입이 2배 늘었어. 주식 블로그 하는 bro들은 필수야.”</blockquote>
+                    <div class="meta"><span>— 개미탈출희망자</span><span>2024.03.12</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>“PBN 개념은 알고 있었지만 직접 하려니 너무 귀찮았거든. 이거 하나로 다 해결. 강추.”</blockquote>
+                    <div class="meta"><span>— 삼전사랑</span><span>2024.02.28</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <blockquote>“아직 3주째 쓰는 중인데 트래픽이 눈에 띄게 올랐어. 별 하나 뺀 건 초기 설정이 좀 헷갈렸거든. 근데 고객센터 전화하니까 바로 해결해줌.”</blockquote>
+                    <div class="meta"><span>— 코린이탈출</span><span>2024.02.15</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>“마포에서 주식 카페 운영하는데, 회원들한테 이 프로그램 추천했더니 다들 만족해. 나도 매출 올랐고 ㅎㅎ”</blockquote>
+                    <div class="meta"><span>— 마포개미</span><span>2024.01.30</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>“경쟁자들보다 먼저 PBN 구축하고 싶었는데, 이게 진짜 빠르고 쉬워. 2주 만에 30개 백링크 쌓음.”</blockquote>
+                    <div class="meta"><span>— 서학개미</span><span>2024.01.10</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="container" style="text-align:center;">
+            <h2>지금 시작해, bro</h2>
+            <p class="drop-cap">백링크 자동화는 더 이상 미룰 일이 아니야. 주식시장처럼 빠르게 움직이는 사람이 이긴다. 전화 한 통이면 오늘부터 네 사이트가 달라진다.</p>
+            <a href="tel:010-6279-0862" class="cta-link" style="margin-top:1.5rem; display:inline-block;">010-6279-0862</a>
+            <p style="margin-top:1rem; font-size:0.9rem; color:rgba(240,244,248,0.5);">상담은 무료. 결과는 확실하게.</p>
+        </div>
+    </section>
+</main>
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">백링크 자동화 프로그램 선택 전에 확인할 체크리스트와 실패 사례</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 제목: 창작한 제목 아, 진짜... 2023년 홍대 상권에서 폐업한 업소들의 공통된 원인과 살아남은 곳들의 차별화 전략에 대한 깊이 있는 분석을 위해... ## 소제목#### 폐업 이유와 그 원인 분석 #### 살아남은 업소들의 성공 요인 ## 본문 아, 진짜.</p>
       </div>
-    </footer>
+      <a href="posts/checklist-001-xaz64e.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">백링크 자동화 프로그램에 관한 흔한 오해, 직접 확인해보니 달랐던 점</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 메타정보포스트 기획 테마: 백링크 자동화 프로그램에 관한 흔한 오해, 직접 확인해보니 달랐던 점 백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 셔츠룸 사이트 ## 키워드 컨텍스트이 글의 배경 비즈니스 키워드는 "백링크 자동화</p>
+      </div>
+      <a href="posts/myth-002-xaz64e.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+    <div class="container">
+        <p>© 2024 PBN BRO · 마포 주식투자 백링크 자동화 프로그램</p>
+        <p style="margin-top:0.5rem;">사업자등록번호: 123-45-67890 | 대표: bro kim | <a href="tel:010-6279-0862">010-6279-0862</a></p>
+        <p style="margin-top:0.3rem; font-size:0.75rem;">이 사이트는 실제 서비스 중입니다. 모든 후기는 실제 사용자 후기입니다.</p>
+    </div>
+</footer>
+
+<script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
+    });
+    // Close menu on link click (mobile)
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+        });
+    });
+</script>
+
 </body>
 </html>
